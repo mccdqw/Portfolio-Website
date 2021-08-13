@@ -4,22 +4,33 @@ import { BlogCard, CardInfo, ExternalLinks, GridContainer, HeaderThree, Hr, Tag,
 import { Section, SectionDivider, SectionTitle } from '../../styles/GlobalComponents';
 import { projects } from '../../constants/constants';
 
-const projectsDisplay = [{
-  title: "Pong Arcade Web Application",
-  description: "This project allows a user to login and play pong with another player"
-}];
 
 const Projects = () => (
   <Section nopadding id="projects">
     <SectionDivider />
     <SectionTitle main>Projects</SectionTitle>
     <GridContainer>
-      {projectsDisplay.map((project) => (
-        <div>
-          {project.title}
-          <br />
-          {project.description}
-        </div>
+      {projects.map(({id, image, title, description, tags, source, visit}) => (
+        <BlogCard key={id} >
+          <Img src={image} />
+            <TitleContent>
+              <HeaderThree title>{title}</HeaderThree>
+              <Hr />
+            </TitleContent>
+            <CardInfo>{description}</CardInfo>
+            <div>
+              <TitleContent>Stack</TitleContent>
+              <TagList>
+                {tags.map((tag, i) => (
+                  <Tag key={i}>{tag}</Tag>
+                ))}
+              </TagList>
+            </div>
+            <UtilityList>
+              <ExternalLinks href={visit}>Code</ExternalLinks>
+              <ExternalLinks href={source}>Source</ExternalLinks>
+            </UtilityList>
+        </BlogCard>
       ))}
     </GridContainer>
   </Section>
