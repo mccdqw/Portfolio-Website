@@ -4,10 +4,25 @@ import { BlogCard, CardInfo, ExternalLinks, GridContainer, HeaderThree, Hr, Tag,
 import { Section, SectionDivider, SectionTitle } from '../../styles/GlobalComponents';
 import { projects } from '../../constants/constants';
 
+const projectsDisplay = [{
+  title: "Pong Arcade Web Application",
+  description: "This project allows a user to login and play pong with another player"
+}];
+
 const Projects = () => (
-  <div>
-    Projects
-  </div>
+  <Section nopadding id="projects">
+    <SectionDivider />
+    <SectionTitle main>Projects</SectionTitle>
+    <GridContainer>
+      {projectsDisplay.map((project) => (
+        <div>
+          {project.title}
+          <br />
+          {project.description}
+        </div>
+      ))}
+    </GridContainer>
+  </Section>
 );
 
 export default Projects;
