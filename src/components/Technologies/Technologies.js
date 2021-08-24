@@ -69,7 +69,7 @@ const Technologies = () =>  (
           </ListParagraph>
         </ListContainer>
       </ListItem>
-      <ListItem>
+      <ListItem style="skillsToLearn">
         <ListContainer>
           <ListTitle>Skills to Learn</ListTitle>
           <ListParagraph>
@@ -87,7 +87,8 @@ const Technologies = () =>  (
           <ListTitle>Currently Learning</ListTitle>
           <ListParagraph>
             Microsoft SQL Server<br />
-            ASP.Net         
+            ASP.Net<br />
+            Options Trading         
           </ListParagraph>
         </ListContainer>
       </ListItem>
