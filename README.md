@@ -1,3 +1,3 @@
 ## Personal Portfolio
 
-Starter code taken from JavascriptMastery Youtube tutorial 
+Starter code taken from JavascriptMastery Youtube tutorial. Work in progress...
